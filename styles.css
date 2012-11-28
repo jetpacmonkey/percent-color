@@ -1,0 +1,87 @@
+label {
+	display: inline-block;
+	width: 100px;
+}
+
+label:after {
+	content: ": ";
+}
+
+section {
+	padding: 30px;
+	margin: 10px 5px;
+	box-shadow: 2px 2px 6px 0 #000;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+}
+
+figure {
+	display: inline-block;
+	vertical-align: middle;
+	width: 250px;
+	padding: 10px;
+	margin: 5px;
+	box-shadow: 2px 2px 6px 0 #666;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.initColorArea figure:before {
+	content: "#";
+	width: 10px;
+	margin-left: -10px;
+}
+
+input[type='text'] {
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #666;
+
+	height: 20px;
+	line-height: 20px;
+
+	box-sizing: border-box;
+
+	-webkit-transition: 0.5s linear box-shadow;
+	-moz-transition: 0.5s linear box-shadow;
+	transition: 0.5s linear box-shadow;
+
+	padding: 0 5px;
+	margin: 5px 0;
+
+	vertical-align: middle;
+}
+
+input[type='text']:focus {
+	box-shadow: 0 0 10px #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	outline: none;
+}
+
+#colorVal {
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid black;
+}
+
+.label {
+	width: 100px;
+	text-align: center;
+}
+
+.color {
+	width: 200px;
+	height: 150px;
+}
+
+.val {
+	width: 200px;
+	text-align: center;
+}
