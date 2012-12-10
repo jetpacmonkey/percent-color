@@ -26,6 +26,18 @@ $(function() {
 		$(this).change();
 	});
 
+	function forceDigits(val, digits) {
+		var str = val.toString();
+		while (str.length < digits) {
+			str = "0" + str;
+		}
+		return str;
+	}
+
+	function toHexStr(val) {
+		return forceDigits(Math.round(val).toString(16).substr(0,2), 2);
+	}
+
 	function shiftByPerc(val, perc) {
 		return val + (255 - val) * (1 - perc);
 	}
@@ -38,11 +50,11 @@ $(function() {
 			b = parseInt(hexVal.substr(4, 2), 16),
 			newR = shiftByPerc(r, percVal),
 			newG = shiftByPerc(g, percVal),
-			newB = shiftByPerc(b, percVal),
+			newB = shiftByPerc(b, percVal)
 			vals = {
 				base: "#" + hexVal,
 				rgba: "rgba(" + r + "," + g + "," + b + "," + percVal + ")",
-				hex: "#" + newR.toString(16).substr(0,2) + newG.toString(16).substr(0,2) + newB.toString(16).substr(0,2)
+				hex: "#" + toHexStr(newR) + toHexStr(newG) + toHexStr(newB)
 			};
 
 		for (var key in samples) {
